@@ -1,0 +1,8 @@
+component_depth: 1
+exclude:
+  - ".*/simulator/.*"
+  - ".*/junk[.]js"
+languages:
+  - css
+  - html
+  - javascript
