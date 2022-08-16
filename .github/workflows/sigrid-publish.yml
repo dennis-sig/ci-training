@@ -13,7 +13,7 @@ jobs:
       - name: "Run Sigrid CI" 
         env:
           SIGRID_CI_TOKEN: "${{ secrets.SIGRID_CI_TOKEN }}"
-        run: "./sigridci/sigridci.py --customer opensource --system ci-training --source . --targetquality 4.0 --publish" 
+        run: "./sigridci/sigridci/sigridci.py --customer opensource --system ci-training --source . --targetquality 4.0 --publish" 
       - name: "Save Sigrid CI results"
         if: ${{ success() || failure() }}
         uses: actions/upload-artifact@v2
