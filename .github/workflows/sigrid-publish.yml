@@ -6,11 +6,13 @@ on:
 jobs:
   sigridci:
     runs-on: ubuntu-20.04
-    container: softwareimprovementgroup/sigridci:latest
+    container: 3.10-alpine3.15
     steps:
-      - run: "yum install -y git"
+      - run: "apk install -y git"
       - name: "Check out repository"
         uses: actions/checkout@v3
+      - name: Download Sigrid CI
+        run: "git clone https://github.com/Software-Improvement-Group/sigridci.git sigridci"
       - name: "Run Sigrid CI" 
         env:
           SIGRID_CI_TOKEN: "${{ secrets.SIGRID_CI_TOKEN }}"
