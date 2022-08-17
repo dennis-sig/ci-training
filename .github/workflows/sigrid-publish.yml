@@ -8,7 +8,6 @@ jobs:
     runs-on: ubuntu-20.04
     container: softwareimprovementgroup/sigridci:latest
     steps:
-      - run: "git --version"
       - name: "Check out repository"
         uses: actions/checkout@v3
       - name: "Run Sigrid CI" 
