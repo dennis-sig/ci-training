@@ -6,7 +6,7 @@ on:
 jobs:
   sigridci:
     runs-on: ubuntu-20.04
-    container: 3.10-alpine3.15
+    container: python:3.10-alpine3.16
     steps:
       - run: "apk install -y git"
       - name: "Check out repository"
