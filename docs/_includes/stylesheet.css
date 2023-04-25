@@ -66,6 +66,10 @@ h1 {
     font-size: 14px;
 }
 
+.container nav a:hover {
+    border-bottom: 1px solid #DFC101;
+}
+
 .container article {
     flex: 1 1 auto;
     padding: 115px 70px 30px 70px;
