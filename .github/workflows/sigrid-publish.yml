@@ -6,16 +6,21 @@ on:
 jobs:
   sigridci:
     runs-on: ubuntu-20.04
+    container: python:3.10-alpine3.16
     steps:
+      - run: "apk add git"
       - name: "Check out repository"
-        uses: actions/checkout@v2
-      - name: Sigrid CI
-        uses: Software-Improvement-Group/sigridci@v1.2
-        with:
-          customer: opensource
-          system: ci-training
-          targetquality: 3.5
-          publish: true
+        uses: actions/checkout@v3
+      - name: Download Sigrid CI
+        run: "git clone https://github.com/Software-Improvement-Group/sigridci.git sigridci"
+      - name: "Run Sigrid CI" 
         env:
           SIGRID_CI_TOKEN: "${{ secrets.SIGRID_CI_TOKEN }}"
-          
+        run: "sigridci/sigridci/sigridci.py --customer opensource --system ci-training --source . --targetquality 3.5"
+      - name: "Save Sigrid CI results"
+        if: ${{ success() || failure() }}
+        uses: actions/upload-artifact@v2
+        with:
+          path: "sigrid-ci-output/**"
+          retention-days: 7
+          if-no-files-found: ignore
