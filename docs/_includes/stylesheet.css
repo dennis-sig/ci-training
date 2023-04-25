@@ -38,7 +38,7 @@ h1 {
 .container nav {
     flex: 0 0 250px;
     background-color: #233347;
-    padding: 30px 0px 30px 0px;
+    padding: 30px 20px 30px 20px;
     box-shadow: 1px 0px 5px #687483;
 }
 
@@ -61,7 +61,7 @@ h1 {
     color: #DFC101;
 }
 
-.container nav a.category {
+.container nav a.page {
     padding-left: 30px;
     font-size: 14px;
 }
