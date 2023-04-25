@@ -1,0 +1,31 @@
+body {	
+    background-color: #F0F3F8;
+    margin: 0px;
+    padding: 0px;
+}
+
+body, td, th {
+    font-family: "Roboto";
+    font-size: 14px;
+    color: #212c3c;
+    line-height: 1.8;
+}
+
+a {
+    color: #04ABC8;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #038096;
+    text-decoration: none;
+}
+
+h1, h2, h3 {
+    color: #8269A4;
+}
+
+nav {
+    background-color: #233347;
+    color: #ffffff;
+}
