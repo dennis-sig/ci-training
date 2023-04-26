@@ -38,10 +38,8 @@ h1 {
 .container nav {
     flex: 0 0 250px;
     background-color: #233347;
-    padding: 30px 20px 30px 20px;
+    padding: 30px 20px 10px 20px;
     box-shadow: 1px 0px 5px #687483;
-    position: absolute;
-    top: 0;
 }
 
 .container nav img {
@@ -55,6 +53,7 @@ h1 {
 .container nav .toc {
     position: sticky;
     top: 0;
+    padding-top: 20px;
 }
 
 .container nav .toc a {
