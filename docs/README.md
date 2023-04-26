@@ -10,6 +10,31 @@ Ut aliquet urna commodo, vulputate mauris sit amet, venenatis sem. Nulla porta s
 
 Duis pellentesque urna a ipsum mattis ultrices. In hac habitasse platea dictumst. Vestibulum at consectetur orci, ut tempor lectus. Nam pellentesque varius sodales. Curabitur et nisi ac tortor tempor imperdiet. Donec ut est orci. Vestibulum cursus urna sed dui accumsan varius. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nulla iaculis hendrerit elit ut luctus. Quisque suscipit neque eleifend erat vestibulum vulputate nec at tellus. Quisque congue mauris purus, id pretium sapien maximus sit amet. Sed tempus, metus a condimentum fermentum, nulla risus suscipit lorem, in bibendum lectus mi dignissim mi. Cras et laoreet nunc. Donec accumsan pulvinar egestas.
 
+<pre>
+if __name__ == "__main__":
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--partner", type=str, default="sig")
+    parser.add_argument("--customer", type=str)
+    parser.add_argument("--system", type=str)
+    parser.add_argument("--source", type=str)
+    parser.add_argument("--targetquality", type=str, default="sigrid")
+    parser.add_argument("--publish", action="store_true")
+    parser.add_argument("--publishonly", action="store_true")
+    parser.add_argument("--exclude", type=str, default="")
+    parser.add_argument("--subsystem", type=str, default="")
+    parser.add_argument("--showupload", action="store_true")
+    parser.add_argument("--include-history", action="store_true")
+    parser.add_argument("--sigridurl", type=str, default="https://sigrid-says.com")
+    # Dummy argument used when passing false to boolean arguments.
+    # BooleanOptionalAction would solve this, but requires Python 3.9+.
+    parser.add_argument("--dummy", action="store_true", help=argparse.SUPPRESS)
+    args = parser.parse_args()
+
+    if args.customer == None or args.system == None or args.source == None:
+        parser.print_help()
+        sys.exit(1)
+</pre>
+
 ## Another sub-header
 
 Vestibulum eget facilisis velit, vel placerat leo. Vestibulum sed fringilla dui, at faucibus mauris. Morbi commodo sed dolor vel egestas. Nulla commodo nunc risus, et auctor tellus ullamcorper vestibulum. Sed a pulvinar nulla, a egestas lacus. Sed sodales iaculis quam. Phasellus sed convallis ipsum.
