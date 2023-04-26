@@ -23,7 +23,7 @@ a:hover {
 }
 
 h1, h2, h3 {
-    color: #8269A4;
+    color: #233347;
 }
 
 h1 {
@@ -40,6 +40,8 @@ h1 {
     background-color: #233347;
     padding: 30px 20px 30px 20px;
     box-shadow: 1px 0px 5px #687483;
+    position: absolute;
+    top: 0;
 }
 
 .container nav img {
@@ -50,23 +52,28 @@ h1 {
     margin-bottom: 50px;
 }
 
-.container nav a {
+.container nav .toc {
+    position: sticky;
+    top: 0;
+}
+
+.container nav .toc a {
     display: block;
     color: #ffffff;
     border-bottom: 1px solid #687483;
     padding: 4px 8px 4px 8px;
 }
 
-.container nav a.category {
+.container nav .toc a.category {
     color: #DFC101;
 }
 
-.container nav a.page {
+.container nav .toc a.page {
     padding-left: 30px;
     font-size: 14px;
 }
 
-.container nav a:hover {
+.container nav .toc a:hover {
     border-bottom: 1px solid #DFC101;
 }
 
