@@ -108,7 +108,13 @@ tr {
     background-color: #ffffff;
 }
 
-th {
+tr:first-child {
     background-color: #233347;
     color: #ffffff;
+}
+
+td, th {
+    min-width: 60px;
+    padding-left: 16px;
+    padding-right: 16px;
 }
