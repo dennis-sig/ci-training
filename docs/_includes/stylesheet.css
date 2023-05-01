@@ -102,3 +102,12 @@ pre {
     box-shadow: 1px 1px 5px #687483;
     font-family: "Menlo", monospace;
 }
+
+tr {
+    border-bottom: 1px dotted #687483;
+}
+
+th {
+    background-color: #233347;
+    color: #ffffff;
+}
