@@ -103,6 +103,10 @@ pre {
     font-family: "Menlo", monospace;
 }
 
+table {
+    border-collapse: collapse;
+}
+
 tr {
     border-bottom: 1px dotted #687483;
     background-color: #ffffff;
