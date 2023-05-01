@@ -112,13 +112,18 @@ tr {
     background-color: #ffffff;
 }
 
-tr:first-child {
+thead tr {
     background-color: #233347;
+}
+
+th {
     color: #ffffff;
+    text-align: left;
 }
 
 td, th {
     min-width: 60px;
     padding-left: 16px;
     padding-right: 16px;
+    font-size: 14px;
 }
