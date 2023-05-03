@@ -10,7 +10,7 @@ Ut aliquet urna commodo, vulputate mauris sit amet, venenatis sem. Nulla porta s
 
 Duis pellentesque urna a ipsum mattis ultrices. In hac habitasse platea dictumst. Vestibulum at consectetur orci, ut tempor lectus. Nam pellentesque varius sodales. Curabitur et nisi ac tortor tempor imperdiet. Donec ut est orci. Vestibulum cursus urna sed dui accumsan varius. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nulla iaculis hendrerit elit ut luctus. Quisque suscipit neque eleifend erat vestibulum vulputate nec at tellus. Quisque congue mauris purus, id pretium sapien maximus sit amet. Sed tempus, metus a condimentum fermentum, nulla risus suscipit lorem, in bibendum lectus mi dignissim mi. Cras et laoreet nunc. Donec accumsan pulvinar egestas.
 
-```python
+```
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument("--partner", type=str, default="sig")
