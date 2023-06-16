@@ -73,6 +73,7 @@ input[type="checkbox"]:checked + .category + .pages {
     color: #ffffff;
     border-bottom: 1px solid #687483;
     padding: 4px 8px 4px 8px;
+    transition: ease 0.5s;
 }
 
 .container nav .toc .category {
