@@ -56,6 +56,18 @@ h2, h3 {
     padding-top: 20px;
 }
 
+.container nav input[type="checkbox"] {
+    display: none;
+}
+
+input[type="checkbox"] + .category + .pages {
+    display: none;
+}
+
+input[type="checkbox"]:checked + .category + .pages {
+    display: block;
+}
+
 .container nav .toc a, .container nav .toc .category {
     display: block;
     color: #ffffff;
@@ -63,7 +75,7 @@ h2, h3 {
     padding: 4px 8px 4px 8px;
 }
 
-.container nav .toc a.category, .container nav .toc .category {
+.container nav .toc .category {
     color: #DFC101;
 }
 
@@ -92,7 +104,7 @@ h2, h3 {
 .container nav .footnote a {
     display: block;
     margin-bottom: 4px;
-    font-size: 12px;
+    font-size: 10px;
     color: #ffffff;
 }
 
