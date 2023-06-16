@@ -71,7 +71,6 @@ input[type="checkbox"]:checked + .category + .pages {
 .container nav .toc a {
     display: block;
     color: #ffffff;
-    border-bottom: 1px solid #687483;
     padding: 4px 8px 4px 8px;
     transition: ease 0.5s;
 }
@@ -79,6 +78,7 @@ input[type="checkbox"]:checked + .category + .pages {
 .container nav .toc .category {
     display: block;
     color: #ffffff;
+    border-bottom: 1px solid #687483;
     padding: 4px 8px 4px 8px;
     cursor: pointer;
     color: #DFC101;
