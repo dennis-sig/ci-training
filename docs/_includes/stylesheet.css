@@ -58,6 +58,7 @@ h2, h3 {
 
 .container nav input[type="checkbox"] {
     display: none;
+    transition: ease 0.5s;
 }
 
 input[type="checkbox"] + .category + .pages {
@@ -76,6 +77,7 @@ input[type="checkbox"]:checked + .category + .pages {
 }
 
 .container nav .toc .category {
+    cursor: pointer;
     color: #DFC101;
 }
 
