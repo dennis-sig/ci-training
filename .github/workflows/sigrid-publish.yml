@@ -2,7 +2,8 @@ name: sigrid-publish
 on:
   push:
     branches:
-      - "master"
+      - master
+      - main
 jobs:
   sigridci:
     runs-on: ubuntu-20.04
@@ -16,7 +17,7 @@ jobs:
       - name: "Run Sigrid CI" 
         env:
           SIGRID_CI_TOKEN: "${{ secrets.SIGRID_CI_TOKEN }}"
-        run: "sigridci/sigridci/sigridci.py --customer opensource --system ci-training --source . --targetquality 3.5"
+        run: "sigridci/sigridci/sigridci.py --customer ssm --system ci-training-example --source . --publish"
       - name: "Save Sigrid CI results"
         if: ${{ success() || failure() }}
         uses: actions/upload-artifact@v2
