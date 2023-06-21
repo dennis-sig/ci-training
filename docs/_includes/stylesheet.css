@@ -28,7 +28,7 @@ h1 {
 }
 
 h2, h3 {
-    color: #04ABC8;
+    color: #334E68;
 }
 
 .container {
@@ -51,8 +51,6 @@ h2, h3 {
 }
 
 .container nav .toc {
-    position: sticky;
-    top: 0;
     padding-top: 20px;
 }
 
@@ -88,11 +86,10 @@ h2, h3 {
 
 .container nav .toc .category {
     display: block;
-    color: #ffffff;
+    color: #DFC101;
     border-top: 1px solid #687483;
     padding: 4px 8px 4px 8px;
     cursor: pointer;
-    color: #DFC101;
     transition: ease 0.5s;
 }
 
@@ -101,7 +98,7 @@ h2, h3 {
     font-size: 12px;
 }
 
-.container nav .toc a:hover, .container nav .toc .category:hover, .toc .currentSection {
+.container nav .toc a:hover, .toc .currentSection {
     background-color: rgba(255, 255, 255, 0.2);
 }
 
@@ -127,7 +124,7 @@ h2, h3 {
 
 .container nav .footnote img {
     display: block;
-    width: 80px;
+    width: 50px;
     margin-bottom: 16px;
     margin-left: 0px;
 }
@@ -137,17 +134,22 @@ h2, h3 {
     padding: 110px 80px 30px 80px;
 }
 
-.container article img {
-    border: 1px solid #687483;
+.container article img, .container article iframe {
+    border: 1px solid #E0E3E7;
     display: block;
     margin-left: auto;
     margin-right: auto;
     box-shadow: 1px 1px 5px #687483;
 }
 
+.container article img.inline {
+    display: inline-block;
+    width: 25px;
+}
+
 pre {
     display: inline-block;
-    max-width: 100%;
+    max-width: 800px;
     overflow-x: scroll;
     line-height: 1.4;
     font-size: 14px;
@@ -179,7 +181,6 @@ th {
 
 td, th {
     min-width: 60px;
-    padding-left: 8px;
-    padding-right: 8px;
+    padding: 4px 8px 4px 8px;
     font-size: 14px;
 }
