@@ -22,22 +22,23 @@
         <script>
             function expandCurrentSection() {
                 const sections = document.querySelectorAll(".toc input[type=checkbox]");
-                const headers = document.querySelectorAll(".toc .category");
                 const panels = document.querySelectorAll(".toc .pages");
             
                 for (let i = 0; i < sections.length; i++) {
-                    if (isCurrentSection(panels[i])) {
+                    const currentPageLink = findCurrentPageLink(panels[i]);
+                    
+                    if (currentPageLink) {
                         sections[i].checked = true;
-                        headers[i].classList.add("currentSection");
+                        currentPageLink.classList.add("currentSection");
                         return;
                     }
                 }          
             }
             
-            function isCurrentSection(panel) {
+            function findCurrentPageLink(panel) {
                 const pages = panel.querySelectorAll("a.page");
                 const links = [...pages].map(link => link.getAttribute("href"));
-                return links.some(link => document.location.pathname.startsWith(link));
+                return links.find(link => document.location.pathname.startsWith(link));
             }
         
             document.addEventListener("DOMContentLoaded", event => expandCurrentSection());
