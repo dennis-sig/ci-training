@@ -34,8 +34,8 @@
             
             function isCurrentSection(panel) {
                 const pages = panel.querySelectorAll("a.page");
-                const pageURLS = [...pages].map(link => link.getAttribute("href"));
-                return pageURLs.some(url => document.location.pathname.startsWith(url));
+                const links = [...pages].map(link => link.getAttribute("href"));
+                return links.some(link => document.location.pathname.startsWith(link));
             }
         
             document.addEventListener("DOMContentLoaded", event => expandCurrentSection());
