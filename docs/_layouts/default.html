@@ -20,16 +20,25 @@
         </div>
         
         <script>
-            document.addEventListener("DOMContentLoaded", event => {
-                const categories = document.querySelectorAll(".toc input[type=checkbox]");
+            function expandCurrentSection() {
+                const sections = document.querySelectorAll(".toc input[type=checkbox]");
                 const panels = document.querySelectorAll(".toc .pages");
-                
-                for (let i = 0; i < categories.length; i++) {
-                    // TODO
-                }
-                
-                categories[1].checked = true;
-            });
+            
+                for (let i = 0; i < sections.length; i++) {
+                    if (isCurrentSection(panels[i])) {
+                        sections[i].checked = true;
+                        return;
+                    }
+                }          
+            }
+            
+            function isCurrentSection(panel) {
+                const pages = panel.querySelectorAll("a.page");
+                const pageURLS = [...pages].map(link => link.getAttribute("href"));
+                return pageURLs.some(url => document.location.pathname.startsWith(url));
+            }
+        
+            document.addEventListener("DOMContentLoaded", event => expandCurrentSection());
         </script>
     </body>
 </html>
