@@ -18,5 +18,18 @@
                 {{ content }}
             </article>
         </div>
+        
+        <script>
+            document.addEventListener("DOMContentLoaded", event => {
+                const categories = document.querySelectorAll(".toc input[type=checkbox]");
+                const panels = document.querySelectorAll(".toc .pages");
+                
+                for (let i = 0; i < categories.length; i++) {
+                    // TODO
+                }
+                
+                categories[1].checked = true;
+            });
+        </script>
     </body>
 </html>
