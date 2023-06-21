@@ -60,12 +60,20 @@ h2, h3 {
     display: none;
 }
 
-input[type="checkbox"] + .category + .pages {
+.container nav input[type="checkbox"] + .category + .pages {
     display: none;
 }
 
-input[type="checkbox"]:checked + .category + .pages {
+.container nav input[type="checkbox"]:checked + .category + .pages {
     display: block;
+}
+
+.container nav input[type="checkbox"]:before {
+    content: "◀";
+}
+
+.container nav input[type="checkbox"]:checked:before {
+    content: "▼";
 }
 
 .container nav .toc a {
