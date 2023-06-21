@@ -69,7 +69,7 @@ h2, h3 {
 }
 
 .container nav input[type="checkbox"]:before {
-    content: "◀";
+    content: "▶";
 }
 
 .container nav input[type="checkbox"]:checked:before {
