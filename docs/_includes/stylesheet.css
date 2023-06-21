@@ -70,7 +70,7 @@ h2, h3 {
     content: "▶  ";
     font-size: 12px;
     display: inline-block;
-    width: 24px;
+    width: 30px;
 }
 
 .container nav input[type="checkbox"]:checked + .category:before {
