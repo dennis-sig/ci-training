@@ -68,12 +68,12 @@ h2, h3 {
     display: block;
 }
 
-.container nav input[type="checkbox"]:before {
-    content: "▶";
+.container nav input[type="checkbox"] + .category:before {
+    content: "▶  ";
 }
 
-.container nav input[type="checkbox"]:checked:before {
-    content: "▼";
+.container nav input[type="checkbox"]:checked + .category:before {
+    content: "▼  ";
 }
 
 .container nav .toc a {
