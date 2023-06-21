@@ -36,9 +36,8 @@
             }
             
             function findCurrentPageLink(panel) {
-                const pages = panel.querySelectorAll("a.page");
-                const links = [...pages].map(link => link.getAttribute("href"));
-                return links.find(link => document.location.pathname.startsWith(link));
+                const links = panel.querySelectorAll("a.page");
+                return links.find(link => document.location.pathname.startsWith(link.getAttribute("href")));
             }
         
             document.addEventListener("DOMContentLoaded", event => expandCurrentSection());
