@@ -71,6 +71,7 @@ h2, h3 {
     font-size: 12px;
     display: inline-block;
     width: 30px;
+    vertical-align: middle;
 }
 
 .container nav input[type="checkbox"]:checked + .category:before {
