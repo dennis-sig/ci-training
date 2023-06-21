@@ -36,7 +36,7 @@
             }
             
             function findCurrentPageLink(panel) {
-                const links = panel.querySelectorAll("a.page");
+                const links = [...panel.querySelectorAll("a.page")];
                 return links.find(link => document.location.pathname.startsWith(link.getAttribute("href")));
             }
         
