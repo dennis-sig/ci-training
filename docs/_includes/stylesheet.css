@@ -185,3 +185,9 @@ td, th {
     padding: 4px 8px 4px 8px;
     font-size: 14px;
 }
+
+img.thankyou {
+    display: block;
+    width: 800px;
+    margin: 50px auto 50px auto;
+}
