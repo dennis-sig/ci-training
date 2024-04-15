@@ -1,0 +1,15 @@
+<h1>Thank you!</h1>
+
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+        const statsURL = "https://sigrid-says.com/usage/matomo.php";
+        const params = new URLSearchParams(window.location.search);
+        const feature = "sigridci.feedback";
+        const feedback = params.get("feedback");
+        const system = params.get("system");
+    
+        const statsElement = document.createElement("img");
+        statsElement.src = `${statsURL}?idsite=6&rec=1&ca=1&e_c=${feature}&e_a=${feedback}&e_n=${system}`;
+        document.body.appendChild(statsElement);
+    });
+</script>

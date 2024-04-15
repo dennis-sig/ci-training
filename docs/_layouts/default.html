@@ -9,14 +9,8 @@
         <style>
             {% include stylesheet.css %}
         </style>
-        
-        <link rel="stylesheet" href="/ci-training/assets/tipuesearch/css/normalize.css" />
-        <link rel="stylesheet" href="/ci-training/assets/tipuesearch/css/tipuesearch.css" />
-
-        <script src="https://unpkg.com/jquery@latest/dist/jquery.min.js"></script>
-        <script src="/ci-training/assets/tipuesearch/tipuesearch_content.js""></script>
-        <script src="/ci-training/assets/tipuesearch/tipuesearch_set.js""></script>
-        <script src="/ci-training/assets/tipuesearch/tipuesearch.min.js""></script>
+        <script src="https://unpkg.com/lunr/lunr.js"></script>
+        <script src="/ci-training/search-index.js"></script>
     </head>
     
     <body>
@@ -47,8 +41,17 @@
                 const links = [...panel.querySelectorAll("a.page")];
                 return links.find(link => document.location.pathname.startsWith(link.getAttribute("href")));
             }
-        
+            
             document.addEventListener("DOMContentLoaded", event => expandCurrentSection());
+            
+            const searchIndex = lunr(function () {
+                this.ref("name")
+                this.field("text")
+
+                documents.forEach(function (doc) {
+                    this.add(doc)
+                }, this)
+            });
         </script>
     </body>
 </html>
