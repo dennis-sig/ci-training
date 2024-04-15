@@ -1,17 +1,37 @@
-<img src="/ci-training/images/feedback-thankyou.svg" class="thankyou" />
-
-<script>
-    document.addEventListener("DOMContentLoaded", () => {
-        const statsURL = "https://sigrid-says.com/usage/matomo.php";
-        const params = new URLSearchParams(window.location.search);
-        const feature = params.get("feature");
-        const feedback = params.get("feedback");
-        const system = params.get("system");
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>Sigrid feedback</title>
+        <meta name="viewport" content="initial-scale=1.0, width=device-width, user-scalable=no">
+        <link rel="shortcut icon" type="image/x-icon" href="/ci-training/images/favicon.png" />
+        
+        <style>
+            img.thankyou {
+                display: block;
+                width: 800px;
+                margin: 50px auto 50px auto;
+            }
+        </style>
+    </head>
     
-        if (feature && feedback && system) {
-            const statsElement = document.createElement("img");
-            statsElement.src = `${statsURL}?idsite=6&rec=1&ca=1&e_c=${feature}&e_a=${feedback}&e_n=${system}`;
-            document.body.appendChild(statsElement);
-        }
-    });
-</script>
+    <body>
+        <img src="/ci-training/images/feedback-thankyou.svg" class="thankyou" />
+        
+        <script>
+            document.addEventListener("DOMContentLoaded", () => {
+                const statsURL = "https://sigrid-says.com/usage/matomo.php";
+                const params = new URLSearchParams(window.location.search);
+                const feature = params.get("feature");
+                const feedback = params.get("feedback");
+                const system = params.get("system");
+            
+                if (feature && feedback && system) {
+                    const statsElement = document.createElement("img");
+                    statsElement.src = `${statsURL}?idsite=6&rec=1&ca=1&e_c=${feature}&e_a=${feedback}&e_n=${system}`;
+                    document.body.appendChild(statsElement);
+                }
+            });
+        </script>
+    </body>
+</html>
